@@ -1,6 +1,6 @@
 package selenium;
 
-import static org.testng.Assert.assertEquals;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

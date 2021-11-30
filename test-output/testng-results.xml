@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10730" started-at="2021-11-23T05:16:49Z" finished-at="2021-11-23T05:16:59Z">
+  <suite name="Default suite" duration-ms="9993" started-at="2021-11-29T05:13:33Z" finished-at="2021-11-29T05:13:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10730" started-at="2021-11-23T05:16:49Z" finished-at="2021-11-23T05:16:59Z">
-      <class name="assignments.verifyLogo">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:assignments.verifyLogo@5e316c74]" name="openBrowser" is-config="true" duration-ms="8601" started-at="2021-11-23T05:16:49Z" finished-at="2021-11-23T05:16:57Z">
+    <test name="Default test" duration-ms="9993" started-at="2021-11-29T05:13:33Z" finished-at="2021-11-29T05:13:43Z">
+      <class name="assignments.OrangeHrm">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:assignments.OrangeHrm@5e316c74]" name="openBrowser" is-config="true" duration-ms="7417" started-at="2021-11-29T05:13:33Z" finished-at="2021-11-29T05:13:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="isLogoDisplayed()[pri:0, instance:assignments.verifyLogo@5e316c74]" name="isLogoDisplayed" duration-ms="2070" started-at="2021-11-23T05:16:57Z" finished-at="2021-11-23T05:16:59Z">
+        <test-method status="PASS" signature="LoginPage()[pri:0, instance:assignments.OrangeHrm@5e316c74]" name="LoginPage" duration-ms="2523" started-at="2021-11-29T05:13:40Z" finished-at="2021-11-29T05:13:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- isLogoDisplayed -->
-      </class> <!-- assignments.verifyLogo -->
+        </test-method> <!-- LoginPage -->
+      </class> <!-- assignments.OrangeHrm -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

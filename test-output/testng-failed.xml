@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="assignments.verifyLogo">
+      <class name="assignments.OrangeHrm">
         <methods>
-          <include name="isLogoDisplayed"/>
           <include name="openBrowser"/>
+          <include name="LoginPage"/>
         </methods>
-      </class> <!-- assignments.verifyLogo -->
+      </class> <!-- assignments.OrangeHrm -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
