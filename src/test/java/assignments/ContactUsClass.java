@@ -37,13 +37,16 @@ public class ContactUsClass {
 		emailAddress.sendKeys("msjijo@gmail.com");
 		orderReference.sendKeys("SHT-45681");
 		messageText.sendKeys("NA");
+		WebElement uploadpicture = wd.findElement(By.id("fileUpload"));
+		uploadpicture.sendKeys("C:\\Users\\Jiji\\Downloads\\1200px-Birthday_candles.jpg");
 		sendButton.click();
 		WebElement alertMessage = wd.findElement(By.cssSelector("#center_column > p"));
 		String alertText = alertMessage.getText();
 		Assert.assertEquals(alertText, "Your message has been successfully sent to our team.");
 	}
- @AfterMethod
+
+	@AfterMethod
 	public void tearDown() {
-		wd.quit();
+		// wd.quit();
 	}
 }

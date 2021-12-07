@@ -25,7 +25,7 @@ public class ToolTipClass {
 	public void tooolTip() throws InterruptedException {
 		String expectedText = "ui-id-36";
 		Actions action = new Actions(wd);
-		WebElement element = wd.findElement(By.cssSelector("div.ui-widget-header a"));
+		WebElement element = wd.findElement(By.cssSelector("body > div:nth-child(1) > div > h3 > a "));
 		action.moveToElement(element).perform();
 
 		Thread.sleep(3000);

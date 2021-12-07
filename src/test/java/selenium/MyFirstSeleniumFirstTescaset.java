@@ -53,6 +53,9 @@ public class MyFirstSeleniumFirstTescaset {
 		String userNameText=userNameLoggedInPage.getText();
 		Assert.assertEquals("testuser", userNameText);
 		//Assert.assertEquals("testuser1", userNameText,"user name does not match");
+	//	Assert.assertTrue(logOutButton.isEnabled());
+		
+	
 	}
 	@AfterMethod
 	public void tearDown()

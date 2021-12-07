@@ -36,20 +36,20 @@ public class WindowHanadles {
 		loginButton.click();
 		String parent = wd.getWindowHandle();
 		System.out.println("Main window handle is " + parent);
-
 		WebElement nextpage = wd.findElement(By.cssSelector("a.help-icon-div>span>svg"));
 		nextpage.click();
 		Set<String> allWindows = wd.getWindowHandles();
 		for (String child : allWindows) {
-			if (!parent.equals(child))
-				;
+			if (!parent.equals(child));
 			{
 				wd.switchTo().window(child);
+				System.out.println(child);
 			}
 		}
 		WebElement adminUserGuide = wd.findElement(By.cssSelector("li:nth-child(1)>a>span.blocks-item-title "));
 		System.out.println("Text inside the new window is : " + adminUserGuide.getText());
 		wd.switchTo().window(parent);
+
 		Actions action = new Actions(wd);
 		WebElement welcomeLabel = wd.findElement(By.xpath("//a[@id='welcome']"));
 		action.moveToElement(welcomeLabel).perform();

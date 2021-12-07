@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 //import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeMethod;
@@ -37,13 +39,46 @@ public class OrangeHrm {
 		welcomeLabel.click();
 		WebElement logOutMenu = driver.findElement(By.cssSelector("#welcome-menu>ul>li:nth-child(3)>a"));
 		action.moveToElement(logOutMenu).perform();
-	    logOutMenu.click();
+
+		WebElement userAttribute = driver.findElement(By.id("welcome"));
+		String userNameText = userAttribute.getText();
+		Assert.assertEquals("Welcome Paul",userNameText, "sucessfully logged");
+		logOutMenu.click();
+
 	}
-	@AfterMethod
-	public void tearDown()
-	{
-	driver.quit();
+	@Test
+	public void recruitmentTab() {
+		
+		WebElement userName = driver.findElement(By.id("txtUsername"));
+		WebElement password = driver.findElement(By.id("txtPassword"));
+		WebElement loginButton = driver.findElement(By.id("btnLogin"));
+		userName.sendKeys("Admin");
+		password.sendKeys("admin123");
+		loginButton.click();
+		WebElement recuritment=driver.findElement(By.cssSelector("#menu_recruitment_viewRecruitmentModule > b"));
+		recuritment.click();
+		WebElement vacancyTab=driver.findElement(By.id("menu_recruitment_viewJobVacancy"));
+		Actions action = new Actions(driver);
+		action.moveToElement(vacancyTab).perform();
+		
+		vacancyTab.click();
+	WebElement jobTitle=driver.findElement(By.id("vacancySearch_jobTitle"));
+	Select select= new Select(jobTitle);
+	select.selectByVisibleText("IT Manager");
+	WebElement vacancyTitle=driver.findElement(By.cssSelector("#vacancySearch_jobVacancy"));
+	Select selectvacancy = new Select(vacancyTitle);
+	selectvacancy.selectByVisibleText("Associate IT Manager");
+	WebElement hiringManger =driver.findElement(By.id("vacancySearch_hiringManager"));
+	Select selectHManager= new  Select(hiringManger);
+	selectHManager.selectByVisibleText("Odis Adalwin");
 	
+	
+	}
+
+	@AfterMethod
+	public void tearDown() {
+		 //driver.quit();
+
 	}
 
 }

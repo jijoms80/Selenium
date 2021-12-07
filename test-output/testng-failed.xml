@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="assignments.OrangeHrm">
+      <class name="assignments.MyStoreSignIn">
         <methods>
           <include name="openBrowser"/>
-          <include name="LoginPage"/>
+          <include name="myStoresignIn"/>
         </methods>
-      </class> <!-- assignments.OrangeHrm -->
+      </class> <!-- assignments.MyStoreSignIn -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

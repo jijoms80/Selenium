@@ -17,7 +17,7 @@ public class SecondTest {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\Jiji\\Desktop\\Assignments\\Selenium\\Chrome Driver\\chromedriver.exe");
 		wd = new ChromeDriver();
-		wd.get("https://demoqa.com/checkbox");
+		wd.get("https://demoqa.com/text-box");
 		wd.manage().window().maximize();
 
 	}
@@ -36,27 +36,18 @@ public class SecondTest {
 		WebElement permanaentAddres=wd.findElement(By.cssSelector("#permanentAddress"));
 		permanaentAddres.sendKeys("India");
 		
-		WebElement submitButton=wd.findElement(By.cssSelector("#submit"));
+		WebElement submitButton=wd.findElement(By.id("submit"));
 		submitButton.click();
 		
 	}
-	@Test
-	public void clickChat()
 	
-	{
-		WebElement checkbox=wd.findElement(By.cssSelector(".rct-checkbox"));
-		checkbox.click();
-		WebElement text=wd.findElement(By.cssSelector("#result"));
-		String labelText=text.getText();
-		System.out.println(labelText);
 	
-	}
 	
 	
 	
 
 	@AfterMethod
 	public void quit() {
-		 wd.quit();
+		// wd.quit();
 	}
 }

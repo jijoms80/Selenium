@@ -41,8 +41,7 @@ public class MenuMouseHover {
 		Actions action =new Actions(driver);
 		WebElement menuMusic=driver.findElement(By.id("ui-id-9"));
 		action.moveToElement(menuMusic).perform();
-		//WebElement menuList=driver.findElement(By.cssSelector("#ui-id-17"));
-		
+				
 		String attributeValue =  menuMusic.getAttribute("class");
 		 Assert.assertEquals(attributeValue, "ui-menu-item-wrapper ui-state-active");
 	}

@@ -21,11 +21,12 @@ public class CheckBoxAndRadioButton {
 		// wd.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
 		wd.get("https://jqueryui.com/checkboxradio/");
 		wd.manage().window().maximize();
+		wd.switchTo().frame(0);
 	}
 
 	@Test
 	public void selectRadioButton() {
-		wd.switchTo().frame(0);
+		
 		WebElement parisRadioButton = wd.findElement(By.cssSelector("label[for='radio-2']"));
 		parisRadioButton.click();
 		WebElement threeStarCheckBox = wd.findElement(By.cssSelector("fieldset:nth-child(5) > label:nth-child(4)"));

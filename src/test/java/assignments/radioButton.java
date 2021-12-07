@@ -22,6 +22,7 @@ public class RadioButton {
 
 	@Test
 	public void radioButtonClick() {
+		wd.switchTo().frame(0);
 		WebElement radioButton = wd.findElement(By.cssSelector(".custom-control-label"));
 		radioButton.click();
 		WebElement buttonClick = wd.findElement(By.cssSelector(".mt-3"));

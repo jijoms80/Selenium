@@ -23,9 +23,9 @@ public class LoginToolQa {
 
 	@Test
 	public void loginPage() {
-		WebElement username = wd.findElement(By.cssSelector("#userName"));
-		WebElement password = wd.findElement(By.cssSelector("#password"));
-		WebElement button = wd.findElement(By.cssSelector("#login"));
+		WebElement username = wd.findElement(By.cssSelector(" #userName "));
+		WebElement password = wd.findElement(By.cssSelector(" #password "));
+		WebElement button = wd.findElement(By.cssSelector(" #login"));
 		username.sendKeys("pivot_academy");
 		password.sendKeys("Password@123");
 		button.click();

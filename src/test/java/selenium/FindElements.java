@@ -1,5 +1,6 @@
 package selenium;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -40,6 +41,9 @@ public class FindElements {
 			System.out.println(webElement.getText());
 
 		}
+		
+		
+		
 
 		// click on a particular element based upon the text
 		List<WebElement> allElement = driver.findElements(By.cssSelector("#categories>li"));
